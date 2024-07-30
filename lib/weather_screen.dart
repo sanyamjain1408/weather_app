@@ -251,9 +251,8 @@ class _WeatherScreenState extends State<WeatherScreen> {
                                   height: screenheight * 0.001,
                                 ),
                                 Icon(
-                                  sky == 'Clear' || sky == 'Cloud'
-                                      ? Icons.sunny
-                                      : Icons.cloud,
+                                  sky == 'Clear' ? Icons.sunny : (sky == 'Cloud' ? Icons.cloud : (sky == 'Rain' ? Icons.cloudy_snowing : Icons.cloud_download)),
+
                                   size: 50,
                                   shadows: const [
                                     Shadow(offset: Offset.infinite),
